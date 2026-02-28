@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-reis = { path = "reis-patched" }
+reis = { git = "https://github.com/markc/reis", branch = "fix-empty-scm-rights" }
 zbus = { version = "5", default-features = false, features = ["tokio"] }
 tokio = { version = "1", features = ["rt", "net", "macros"] }
 clap = { version = "4", features = ["derive"] }

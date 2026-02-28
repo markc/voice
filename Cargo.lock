@@ -505,6 +505,7 @@ checksum = "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f"
 [[package]]
 name = "reis"
 version = "0.6.1"
+source = "git+https://github.com/markc/reis?branch=fix-empty-scm-rights#150388f9430226e711d2810b91b272595fe7ce9c"
 dependencies = [
  "enumflags2",
  "log",
