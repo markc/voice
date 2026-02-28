@@ -6,7 +6,7 @@ LDFLAGS  ?=
 PKG_CFLAGS  := $(shell pkg-config --cflags libei-1.0)
 PKG_LDFLAGS := $(shell pkg-config --libs libei-1.0) -lsystemd
 
-.PHONY: all clean install uninstall
+.PHONY: all clean install uninstall rust install-rust
 
 all: ei-type
 
@@ -20,5 +20,13 @@ install: ei-type
 uninstall:
 	rm -f $(BINDIR)/ei-type
 
+rust:
+	cargo build --release
+
+install-rust: rust
+	install -d $(BINDIR)
+	install -m 755 target/release/ei-type $(BINDIR)/ei-type
+
 clean:
 	rm -f ei-type
+	rm -rf target

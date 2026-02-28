@@ -1,0 +1,11 @@
+[package]
+name = "ei-type"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reis = { path = "reis-patched" }
+zbus = { version = "5", default-features = false, features = ["tokio"] }
+tokio = { version = "1", features = ["rt", "net", "macros"] }
+clap = { version = "4", features = ["derive"] }
+libc = "0.2"
